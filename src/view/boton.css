@@ -1,0 +1,29 @@
+
+/* 
+    Author     : David Ronald Calle Blanco
+*/
+
+.button {
+    -fx-background-color: #005264;
+}
+
+.button:hover {
+    -fx-background-color: #00677e;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.buttondegra {
+  -fx-background-color: linear-gradient(to right, #138086,#EEB462);
+}
+.buttondegra:hover {
+    -fx-background-color: linear-gradient(to right, #138086,#EEB462);
+    -fx-text-fill: white;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+.textfield-color {
+  -fx-text-fill: white;
+}
+

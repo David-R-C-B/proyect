@@ -1,0 +1,10 @@
+
+/* 
+    Author     : Daavid Ronald Calle Blanco 
+*/
+.colorsolido{
+    -fx-background-color: #005264;
+}
+.colordegradado{
+    -fx-background-color: linear-gradient(to right, #138086,#EEB462);
+}

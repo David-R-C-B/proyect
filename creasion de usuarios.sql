@@ -1,0 +1,3 @@
+CREATE ROLE david SUPERUSER LOGIN PASSWORD 'david';
+
+

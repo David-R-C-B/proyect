@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PantallaentrenadorController">
+   <children>
+      <MenuBar styleClass="colordegradado" stylesheets="@color.css">
+        <menus>
+          <Menu mnemonicParsing="false" text="Rutinas">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#rutina" text="Revisar Rutinas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Seguimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#seguimiento" text="Revisar seguimiento" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" styleClass="fondoatleta" stylesheets="@fondos.css">
+               <children>
+                  <Label fx:id="bienvenidoLabe" alignment="CENTER" layoutY="34.0" prefHeight="59.0" prefWidth="444.0" text="Label" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="34.0">
+                     <font>
+                        <Font name="Afterglow Regular" size="33.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="ruti" layoutX="14.0" prefHeight="200.0" prefWidth="200.0" styleClass="fondogalaxia" stylesheets="@fondos.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ScrollPane fx:id="atletaasignado" fitToHeight="true" fitToWidth="true" prefHeight="267.0" prefWidth="478.0" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <TableView fx:id="tabla" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </ScrollPane>
+                        <ScrollPane fx:id="rutiatleta" fitToHeight="true" fitToWidth="true" prefHeight="267.0" prefWidth="478.0" visible="false" AnchorPane.bottomAnchor="195.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="506.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <TableView fx:id="tabla1" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </ScrollPane>
+                        <TextField fx:id="idEntrenador" editable="false" layoutX="511.0" layoutY="63.0" promptText="ID" />
+                        <TextField fx:id="idAtleta" editable="false" layoutX="512.0" layoutY="109.0" />
+                        <DatePicker fx:id="fecha" layoutX="703.0" layoutY="109.0" prefHeight="25.0" prefWidth="150.0" />
+                        <TextField fx:id="tipo" layoutX="702.0" layoutY="63.0" />
+                        <TextArea fx:id="comentario" layoutX="512.0" layoutY="161.0" prefHeight="147.0" prefWidth="345.0" />
+                        <Button layoutX="452.0" layoutY="357.0" mnemonicParsing="false" onAction="#agregar" styleClass="buttondegra" stylesheets="@boton.css" text="Agregar Rutina" />
+                        <Button layoutX="486.0" layoutY="14.0" mnemonicParsing="false" onAction="#verrutinas" styleClass="buttondegra" stylesheets="@boton.css" text="Rutinas" />
+                        <Button layoutX="587.0" layoutY="14.0" mnemonicParsing="false" onAction="#veratleta" styleClass="buttondegra" stylesheets="@boton.css" text="Atletas Asignados" />
+                        <Label layoutX="511.0" layoutY="46.0" prefHeight="17.0" prefWidth="149.0" text="Id Entrenador" textFill="WHITE" />
+                        <Label layoutX="513.0" layoutY="93.0" prefHeight="17.0" prefWidth="149.0" text="Id Atleta" textFill="WHITE" />
+                        <Label layoutX="702.0" layoutY="46.0" prefHeight="17.0" prefWidth="149.0" text="Tipo de Rutina" textFill="WHITE" />
+                        <Label layoutX="610.0" layoutY="144.0" prefHeight="17.0" prefWidth="149.0" text="Comentario" textFill="WHITE" />
+                        <Label layoutX="712.0" layoutY="103.0" prefHeight="17.0" prefWidth="149.0" text="Fecha de la Rutina" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="seguimiento" prefHeight="200.0" prefWidth="200.0" styleClass="fondogalaxia" stylesheets="@fondos.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView fx:id="segui" prefHeight="464.0" prefWidth="986.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</VBox>
